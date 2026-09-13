@@ -2070,7 +2070,7 @@ public class Blocks{
         conveyor = new Conveyor("conveyor"){{
             requirements(Category.distribution, with(Items.copper, 1));
             health = 45;
-            speed = 0.035f;
+            speed = 0.0355f;
             displayedSpeed = 5f;
             researchCost = with(Items.copper, 5);
         }};
