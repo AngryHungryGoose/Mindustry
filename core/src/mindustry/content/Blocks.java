@@ -3280,31 +3280,46 @@ public class Blocks{
                     width = 7f;
                     height = 9f;
                     lifetime = 60f;
-                    ammoMultiplier = 2;
+                    ammoMultiplier = 4;
 
                     hitEffect = despawnEffect = Fx.hitBulletColor;
                     hitColor = backColor = trailColor = Pal.copperAmmoBack;
                     frontColor = Pal.copperAmmoFront;
                 }},
-                Items.graphite, new BasicBulletType(3.5f, 18){{
+                Items.graphite, new BasicBulletType(3.5f, 12){{
                     width = 9f;
                     height = 12f;
-                    ammoMultiplier = 4;
+                    ammoMultiplier = 3;
                     lifetime = 60f;
-                    reloadMultiplier = 0.8f;
-                    rangeChange = 16f;
+                    reloadMultiplier = 0.6f;
+
+                    fragBullets = 3;
+                    fragRandomSpread = 20f;
+                    fragSpread = 30f;
+                    fragVelocityMin = 1f;
+
+                    fragBullet = new BasicBulletType(3.5f, 6f){{
+                        lifetime = 11f;
+                        width = 6f;
+                        height = 8f;
+                        hitEffect = despawnEffect = Fx.hitBulletColor;
+                        hitColor = backColor = trailColor = Pal.graphiteAmmoBack;
+                        frontColor = Pal.graphiteAmmoFront;
+                    }}
 
                     hitEffect = despawnEffect = Fx.hitBulletColor;
                     hitColor = backColor = trailColor = Pal.graphiteAmmoBack;
                     frontColor = Pal.graphiteAmmoFront;
                 }},
-                Items.silicon, new BasicBulletType(3f, 12){{
+                Items.silicon, new BasicBulletType(3f, 9){{
                     width = 7f;
                     height = 9f;
                     homingPower = 0.2f;
-                    reloadMultiplier = 1.5f;
-                    ammoMultiplier = 5;
-                    lifetime = 60f;
+                    reloadMultiplier = 0.75f;
+                    ammoMultiplier = 12;
+                    lifetime = 72f;
+
+                    rangeChange = 4f * 8f;
 
                     trailLength = 5;
                     trailWidth = 1.5f;
@@ -3333,7 +3348,7 @@ public class Blocks{
             shootSound = Sounds.shootDuo;
             recoil = 0.5f;
             shootY = 3f;
-            reload = 20f;
+            reload = 15f;
             range = 160;
             shootCone = 15f;
             ammoUseEffect = Fx.casing1;
