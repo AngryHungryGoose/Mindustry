@@ -3366,30 +3366,56 @@ public class Blocks{
         scatter = new ItemTurret("scatter"){{
             requirements(Category.turret, with(Items.copper, 85, Items.lead, 45));
             ammo(
-                Items.scrap, new FlakBulletType(4f, 3){{
-                    lifetime = 60f;
+                Items.scrap, new FlakBulletType(8f, 3){{
+                    lifetime = 30f;
                     ammoMultiplier = 5f;
                     shootEffect = Fx.shootSmall;
-                    reloadMultiplier = 0.5f;
                     width = 6f;
                     height = 8f;
                     hitEffect = Fx.flakExplosion;
-                    splashDamage = 22f * 1.5f;
-                    splashDamageRadius = 24f;
+                    splashDamage = 18f * 1.5f;
+                    splashDamageRadius = 15f;
+
+                    fragBullets = 3;
+                    fragBullet = new BasicBulletType(3f, 5){{
+                        width = 5f;
+                        height = 12f;
+                        shrinkY = 1f;
+                        lifetime = 20f;
+                        frontColor = Pal.scrapAmmoFront;
+                        backColor = hitColor = Pal.scrapAmmoBack;
+                        despawnEffect = Fx.none;
+                        collidesGround = false;
+                    }};
 
                     frontColor = Pal.scrapAmmoFront;
                     backColor = hitColor = Pal.scrapAmmoBack;
                     despawnEffect = Fx.hitBulletColor;
                 }},
-                Items.lead, new FlakBulletType(4.2f, 3){{
-                    lifetime = 60f;
+                Items.lead, new FlakBulletType(4f, 3){{
+                    lifetime = 48f;
                     ammoMultiplier = 4f;
                     shootEffect = Fx.shootSmall;
+                    reloadMultiplier = 0.4f;
                     width = 6f;
                     height = 8f;
                     hitEffect = Fx.flakExplosion;
                     splashDamage = 27f * 1.5f;
                     splashDamageRadius = 15f;
+
+                    rangeChange = -5.5f * 8f;
+
+                    fragBullets = 8;
+                    fragBullet = new BasicBulletType(3f, 12){{
+                        width = 5f;
+                        height = 12f;
+                        shrinkY = 1f;
+                        lifetime = 20f;
+                        backColor = trailColor = Pal.glassAmmoBack;
+                        hitColor = frontColor = Pal.glassAmmoFront;
+                        despawnEffect = Fx.none;
+                        collidesGround = false;
+                    }};
                 }},
                 Items.metaglass, new FlakBulletType(4f, 3){{
                     backColor = trailColor = Pal.glassAmmoBack;
@@ -3399,14 +3425,16 @@ public class Blocks{
                     lifetime = 60f;
                     ammoMultiplier = 5f;
                     shootEffect = Fx.shootSmall;
-                    reloadMultiplier = 0.8f;
+                    reloadMultiplier = 0.6f;
                     width = 6f;
                     height = 8f;
                     hitEffect = Fx.flakExplosion;
                     splashDamage = 30f * 1.5f;
-                    splashDamageRadius = 20f;
-                    fragBullets = 6;
-                    fragBullet = new BasicBulletType(3f, 5){{
+                    splashDamageRadius = 15f;
+                    fragBullets = 8;
+                    fragBullet = new BasicBulletType(3f, 8){{
+                        pierce = true;
+                        pierceCap = 2;
                         width = 5f;
                         height = 12f;
                         shrinkY = 1f;
