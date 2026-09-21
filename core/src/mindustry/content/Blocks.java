@@ -6499,7 +6499,7 @@ public class Blocks{
             regionSuffix = "-dark";
 
             size = 3;
-            configurable = false;
+            showAllCommands = false;
             consumePower(3f);
             consumeLiquid(Liquids.hydrogen, 3f / 60f);
             consumeItems(with(Items.silicon, 40, Items.tungsten, 30));
@@ -6517,7 +6517,7 @@ public class Blocks{
             regionSuffix = "-dark";
 
             size = 3;
-            configurable = false;
+            showAllCommands = false;
             consumePower(2.5f);
             consumeLiquid(Liquids.hydrogen, 3f / 60f);
             consumeItems(with(Items.silicon, 60, Items.tungsten, 40));
@@ -6536,7 +6536,7 @@ public class Blocks{
             regionSuffix = "-dark";
 
             size = 3;
-            configurable = false;
+            showAllCommands = false;
             consumePower(2.5f);
             consumeLiquid(Liquids.hydrogen, 3f / 60f);
             consumeItems(with(Items.silicon, 50, Items.tungsten, 40));
@@ -6549,7 +6549,6 @@ public class Blocks{
             );
         }};
 
-        //yes very silly name
         primeRefabricator = new Reconstructor("prime-refabricator"){{
             requirements(Category.units, with(Items.thorium, 250, Items.oxide, 200, Items.tungsten, 200, Items.silicon, 400));
             regionSuffix = "-dark";
@@ -6557,7 +6556,7 @@ public class Blocks{
             researchCostMultipliers.put(Items.thorium, 0.2f);
 
             size = 5;
-            configurable = false;
+            showAllCommands = false;
             consumePower(4.5f);
             consumeLiquid(Liquids.nitrogen, 10f / 60f);
             consumeItems(with(Items.thorium, 80, Items.silicon, 100));
