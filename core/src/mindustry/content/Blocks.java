@@ -3532,12 +3532,25 @@ public class Blocks{
                     lifetime = 80f;
                     width = height = 11f;
                     collidesTiles = false;
-                    splashDamageRadius = 25f * 0.75f;
-                    splashDamage = 33f;
+                    splashDamageRadius = 15f * 0.75f;
+                    splashDamage = 15f;
 
                     hitColor = backColor = trailColor = Pal.graphiteAmmoBack;
                     frontColor = Pal.graphiteAmmoFront;
                     despawnEffect = Fx.hitBulletColor;
+
+                    fragBullets = 8;
+                    fragBullet = new BasicBulletType(5f, 5){{
+                        pierce = true;
+                        pierceCap = 2;
+                        width = 8f;
+                        height = 8f;
+                        shrinkY = 1f;
+                        lifetime = 15f;
+                        backColor = trailColor = Pal.graphiteAmmoBack;
+                        hitColor = frontColor = Pal.graphiteAmmoFront;
+                        despawnEffect = Fx.none;
+                        collidesAir = false;
                 }},
                 Items.silicon, new ArtilleryBulletType(3f, 20){{
                     knockback = 0.8f;
@@ -3547,7 +3560,7 @@ public class Blocks{
                     splashDamageRadius = 25f * 0.75f;
                     splashDamage = 33f;
                     reloadMultiplier = 1.2f;
-                    ammoMultiplier = 3f;
+                    ammoMultiplier = 4f;
                     homingPower = 0.08f;
                     homingRange = 50f;
 
@@ -3564,15 +3577,15 @@ public class Blocks{
                     lifetime = 80f;
                     width = height = 13f;
                     collidesTiles = false;
-                    splashDamageRadius = 25f * 0.75f;
-                    splashDamage = 45f;
+                    splashDamageRadius = 40f * 0.75f;
+                    splashDamage = 25f;
                     status = StatusEffects.burning;
                     statusDuration = 60f * 12f;
                     frontColor = trailColor = hitColor = Pal.lightishOrange;
                     backColor = Pal.lightOrange;
                     makeFire = true;
                     trailEffect = Fx.incendTrail;
-                    ammoMultiplier = 4f;
+                    ammoMultiplier = 6f;
                     despawnEffect = Fx.hitBulletColor;
                 }}
             );
