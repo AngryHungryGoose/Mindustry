@@ -3394,7 +3394,7 @@ public class Blocks{
                 }},
                 Items.lead, new FlakBulletType(4f, 3){{
                     lifetime = 48f;
-                    ammoMultiplier = 4f;
+                    ammoMultiplier = 3f;
                     shootEffect = Fx.shootSmall;
                     reloadMultiplier = 0.4f;
                     width = 6f;
@@ -3423,7 +3423,7 @@ public class Blocks{
                     despawnEffect = Fx.hitBulletColor;
 
                     lifetime = 60f;
-                    ammoMultiplier = 5f;
+                    ammoMultiplier = 10f;
                     shootEffect = Fx.shootSmall;
                     reloadMultiplier = 0.6f;
                     width = 6f;
