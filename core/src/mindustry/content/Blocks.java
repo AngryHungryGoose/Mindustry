@@ -3366,8 +3366,8 @@ public class Blocks{
         scatter = new ItemTurret("scatter"){{
             requirements(Category.turret, with(Items.copper, 85, Items.lead, 45));
             ammo(
-                Items.scrap, new FlakBulletType(8f, 3){{
-                    lifetime = 30f;
+                Items.scrap, new FlakBulletType(4f, 3){{
+                    lifetime = 60f;
                     ammoMultiplier = 5f;
                     shootEffect = Fx.shootSmall;
                     width = 6f;
@@ -3480,11 +3480,11 @@ public class Blocks{
         scorch = new ItemTurret("scorch"){{
             requirements(Category.turret, with(Items.copper, 25, Items.graphite, 22));
             ammo(
-                Items.coal, new BulletType(3.35f, 17f){{
-                    ammoMultiplier = 3f;
+                Items.coal, new BulletType(3.35f, 25f){{
+                    ammoMultiplier = 4f;
                     hitSize = 7f;
                     lifetime = 18f;
-                    pierce = true;
+                    pierce = false;
                     collidesAir = false;
                     statusDuration = 60f * 4;
                     shootEffect = Fx.shootSmallFlame;
@@ -3493,11 +3493,11 @@ public class Blocks{
                     status = StatusEffects.burning;
                     hittable = false;
                 }},
-                Items.pyratite, new BulletType(4f, 30f){{
-                    ammoMultiplier = 10f;
+                Items.pyratite, new BulletType(4f, 35f){{
+                    ammoMultiplier = 15f;
                     hitSize = 7f;
                     lifetime = 18f;
-                    pierce = true;
+                    pierce = false;
                     collidesAir = false;
                     statusDuration = 60f * 10;
                     shootEffect = Fx.shootPyraFlame;
@@ -3505,12 +3505,15 @@ public class Blocks{
                     despawnEffect = Fx.none;
                     status = StatusEffects.burning;
                     hittable = false;
+
+                    rangeChange = -1.5f * 8f;
+                    reloadMultiplier = 0.8f;
                 }}
             );
             recoil = 0f;
             reload = 6f;
             coolantMultiplier = 1.5f;
-            range = 60f;
+            range = 72f;
             shootY = 3;
             shootCone = 50f;
             targetAir = false;
