@@ -1944,20 +1944,25 @@ public class Blocks{
         }};
 
         overdriveProjector = new OverdriveProjector("overdrive-projector"){{
-            requirements(Category.effect, with(Items.lead, 100, Items.titanium, 75, Items.silicon, 75, Items.plastanium, 30));
-            consumePower(3.50f);
+            requirements(Category.effect, with(Items.lead, 100, Items.silicon, 100, Items.metaglass, 50, Items.plastanium, 60));
+            consumePower(8f);
             size = 2;
+            range = 100f;
+            speedBoost = 1.2f;
+            speedBoostPhase = 0.3f;
+            phaseRangeBoost = 0f;
+            useTime = 300f;
             consumeItem(Items.phaseFabric).boost();
             ambientSoundVolume = 0.08f;
         }};
 
         overdriveDome = new OverdriveProjector("overdrive-dome"){{
-            requirements(Category.effect, with(Items.lead, 200, Items.titanium, 130, Items.silicon, 130, Items.plastanium, 80, Items.surgeAlloy, 120));
-            consumePower(10f);
+            requirements(Category.effect, with(Items.lead, 400, Items.silicon, 250, Items.metaglass, 200, Items.plastanium, 300, Items.surgeAlloy, 125));
+            consumePower(20f);
             size = 3;
             range = 200f;
-            speedBoost = 2.5f;
-            useTime = 300f;
+            speedBoost = 1.5f;
+            useTime = 240f;
             ambientSoundVolume = 0.12f;
             hasBoost = false;
             consumeItems(with(Items.phaseFabric, 1, Items.silicon, 1));
